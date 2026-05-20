@@ -8,7 +8,6 @@ interface SplashScreenProps {
 export default function SplashScreen({ onFinish }: SplashScreenProps) {
   const preloaderRef = useRef<HTMLDivElement>(null);
   const logoRef = useRef<HTMLImageElement>(null);
-  const textRef = useRef<HTMLDivElement>(null);
   const progressBarRef = useRef<HTMLDivElement>(null);
   const bgRef = useRef<HTMLDivElement>(null);
 
@@ -17,7 +16,7 @@ export default function SplashScreen({ onFinish }: SplashScreenProps) {
     document.body.classList.add("loading");
 
     // Iniciar posições escondidas
-    gsap.set([logoRef.current, textRef.current], { opacity: 0, y: 30 });
+    gsap.set(logoRef.current, { opacity: 0, y: 30 });
     gsap.set(progressBarRef.current, { scaleX: 0 });
 
     // Timeline de entrada suave
@@ -33,13 +32,7 @@ export default function SplashScreen({ onFinish }: SplashScreenProps) {
       duration: 0.8,
       ease: "back.out(1.7)",
       delay: 0.2
-    })
-    .to(textRef.current, {
-      opacity: 1,
-      y: 0,
-      duration: 0.5,
-      ease: "power2.out"
-    }, "-=0.4");
+    });
 
     const startLoadingProcess = () => {
       const progress = { value: 0 };
@@ -71,7 +64,7 @@ export default function SplashScreen({ onFinish }: SplashScreenProps) {
         }
       });
 
-      exitTl.to([logoRef.current, textRef.current, progressBarRef.current], {
+      exitTl.to([logoRef.current, progressBarRef.current], {
         opacity: 0,
         y: -30,
         duration: 0.5,
@@ -108,29 +101,19 @@ export default function SplashScreen({ onFinish }: SplashScreenProps) {
       <div className="relative z-10 flex flex-col items-center">
         
         {/* Container do Logo + Brilho Pulsante Azul/Amarelo */}
-        <div className="mb-8 relative">
+        <div className="mb-10 relative">
           <div className="absolute -inset-6 bg-[#1C2978]/30 blur-3xl rounded-full scale-150 animate-pulse"></div>
           <div className="absolute -inset-4 bg-[#FFD200]/10 blur-2xl rounded-full scale-125 animate-pulse" style={{ animationDelay: "1s" }}></div>
           <img
             ref={logoRef}
-            src="/images/logos/LOGO.webp"
+            src="/images/logos/logo-carregamento.webp"
             alt="Logo Haja Luz"
-            className="w-32 h-32 md:w-40 md:h-40 object-contain rounded-2xl drop-shadow-[0_0_20px_rgba(28,41,120,0.6)] ring-1 ring-white/10 shadow-2xl relative z-10"
+            className="w-64 md:w-80 h-auto max-w-[80vw] object-contain drop-shadow-[0_0_20px_rgba(28,41,120,0.6)] relative z-10"
           />
         </div>
 
-        {/* Textos da Marca */}
-        <div ref={textRef} className="text-center mb-6">
-          <p className="text-[#FFD200] font-sans text-xs font-bold tracking-[0.4em] uppercase opacity-90 mb-1.5">
-            MATERIAIS ELÉTRICOS
-          </p>
-          <h2 className="text-white font-display font-bold text-3xl md:text-5xl tracking-[0.15em] uppercase leading-none">
-            ENERGIA NOVA
-          </h2>
-        </div>
-
         {/* Barra de Progresso */}
-        <div className="w-48 h-[3px] bg-white/10 rounded-full overflow-hidden relative">
+        <div className="w-56 h-[3px] bg-white/10 rounded-full overflow-hidden relative">
           <div
             ref={progressBarRef}
             className="absolute top-0 left-0 h-full w-full bg-[#FFD200] origin-left"

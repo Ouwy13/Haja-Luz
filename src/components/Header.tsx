@@ -141,6 +141,7 @@ export default function Header() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.2 }}
+                    style={{ willChange: "transform, opacity" }}
                     className="absolute top-full left-0 right-0 bg-white/98 backdrop-blur-md shadow-[0_20px_50px_rgba(28, 41, 120,0.18)] rounded-2xl overflow-hidden z-[60] mt-2 border border-slate-100"
                   >
                     {searchResults.length > 0 ? (
@@ -263,6 +264,7 @@ export default function Header() {
                           animate={{ opacity: 1, y: 0, scale: 1 }}
                           exit={{ opacity: 0, y: 10, scale: 0.98 }}
                           transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                          style={{ willChange: "transform, opacity" }}
                           className={`absolute top-full ${index >= arr.length - 2 ? 'right-0' : 'left-0'} bg-white/98 backdrop-blur-md shadow-[0_20px_50px_rgba(28, 41, 120,0.18)] border border-slate-100 rounded-2xl overflow-y-auto max-h-[calc(100vh-160px)] z-[100] min-w-[260px] py-3 mt-1`}
                         >
                           <div className="px-5 py-2 mb-2">

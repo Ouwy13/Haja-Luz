@@ -5,20 +5,20 @@ export default function PromoBanners() {
     <section className="py-12 bg-[#f3f4f6]">
       <style>{`
         @keyframes float {
-          0%, 100% { transform: translateY(0px) rotate(0deg); }
-          50% { transform: translateY(-12px) rotate(2deg); }
+          0%, 100% { transform: translate3d(0, 0px, 0) rotate(0deg); }
+          50% { transform: translate3d(0, -12px, 0) rotate(2deg); }
         }
         @keyframes float-reverse {
-          0%, 100% { transform: translateY(0px) rotate(0deg); }
-          50% { transform: translateY(-10px) rotate(-3deg); }
+          0%, 100% { transform: translate3d(0, 0px, 0) rotate(0deg); }
+          50% { transform: translate3d(0, -10px, 0) rotate(-3deg); }
         }
         @keyframes glow-pulse {
           0%, 100% { opacity: 0.4; transform: scale(1); }
           50% { opacity: 0.8; transform: scale(1.1); }
         }
         @keyframes shimmer {
-          0% { transform: translateX(-100%); }
-          100% { transform: translateX(100%); }
+          0% { transform: translate3d(-100%, 0, 0); }
+          100% { transform: translate3d(100%, 0, 0); }
         }
       `}</style>
 

@@ -94,13 +94,13 @@
 
 /* Premium Motion & Glass Effects */
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); filter: blur(4px); }
-  to { opacity: 1; transform: translateY(0); filter: blur(0px); }
+  from { opacity: 0; transform: translate3d(0, 20px, 0); filter: blur(4px); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); filter: blur(0px); }
 }
 
 @keyframes dropdownSlide {
-  from { opacity: 0; transform: translateY(-10px) scale(0.98); }
-  to { opacity: 1; transform: translateY(0) scale(1); }
+  from { opacity: 0; transform: translate3d(0, -10px, 0) scale(0.98); }
+  to { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
 }
 
 @keyframes beam-spin {
@@ -112,30 +112,33 @@
 @keyframes animationIn {
   0% {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translate3d(0, 30px, 0);
     filter: blur(8px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
     filter: blur(0px);
   }
 }
 
 .animate-on-scroll {
   opacity: 0;
-  transform: translateY(var(--y-offset, 30px)) translateX(var(--x-offset, 0px));
+  /* Use translate3d to force hardware acceleration (GPU compositing) */
+  transform: translate3d(var(--x-offset, 0px), var(--y-offset, 30px), 0);
   filter: blur(var(--blur-amount, 8px));
   transition: opacity var(--duration, 0.8s) cubic-bezier(0.16, 1, 0.3, 1),
               transform var(--duration, 0.8s) cubic-bezier(0.16, 1, 0.3, 1),
               filter var(--duration, 0.8s) cubic-bezier(0.16, 1, 0.3, 1);
   transition-delay: var(--delay, 0s);
   will-change: opacity, transform, filter;
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
 .animate-on-scroll.animate {
   opacity: 1;
-  transform: translateY(0) translateX(0);
+  transform: translate3d(0, 0, 0);
   filter: blur(0px);
 }
 

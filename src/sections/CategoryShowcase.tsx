@@ -130,6 +130,7 @@ export default function CategoryShowcase() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
+              style={{ willChange: "transform, opacity" }}
               className="fixed inset-0 z-[9999] flex flex-col"
             >
               {/* Backdrop com Blur */}
@@ -137,6 +138,7 @@ export default function CategoryShowcase() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
+                style={{ willChange: "opacity" }}
                 className="absolute inset-0 bg-[#1C2978]/60 backdrop-blur-md"
                 onClick={closeCategoryScreen}
               />
@@ -147,6 +149,7 @@ export default function CategoryShowcase() {
                 animate={{ y: 0 }}
                 exit={{ y: '100%' }}
                 transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+                style={{ willChange: "transform" }}
                 className="relative w-full h-full bg-[#f3f4f6] flex flex-col overflow-hidden"
               >
             
@@ -309,12 +312,12 @@ export default function CategoryShowcase() {
         to { opacity: 1; }
       }
       @keyframes modalSlideUp {
-        from { opacity: 0; transform: translateY(30px) scale(0.98); }
-        to { opacity: 1; transform: translateY(0) scale(1); }
+        from { opacity: 0; transform: translate3d(0, 30px, 0) scale(0.98); }
+        to { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
       }
       @keyframes fadeInUp {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0); }
+        from { opacity: 0; transform: translate3d(0, 20px, 0); }
+        to { opacity: 1; transform: translate3d(0, 0, 0); }
       }
       .hide-scrollbar::-webkit-scrollbar {
         display: none;

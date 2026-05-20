@@ -1,15 +1,17 @@
-import { useState } from 'react';
+import { useState, lazy, Suspense } from 'react';
 import { CartProvider } from './contexts/CartContext';
 import CartDrawer from './components/CartDrawer';
 import FlyingAnimations from './components/FlyingAnimations';
 import Header from './components/Header';
 import HeroBanner from './components/HeroBanner';
 
-import BestSellers from './sections/BestSellers';
-import TopProducts from './sections/TopProducts';
-import CategoryShowcase from './sections/CategoryShowcase';
-import AboutStore from './sections/AboutStore';
-import Footer from './components/Footer';
+// Lazy loading below-the-fold components to speed up FCP and TTI
+const BestSellers = lazy(() => import('./sections/BestSellers'));
+const TopProducts = lazy(() => import('./sections/TopProducts'));
+const CategoryShowcase = lazy(() => import('./sections/CategoryShowcase'));
+const AboutStore = lazy(() => import('./sections/AboutStore'));
+const Footer = lazy(() => import('./components/Footer'));
+
 import BottomNavigation from './components/BottomNavigation';
 import WhatsAppFloatingButton from './components/WhatsAppFloatingButton';
 import SideProgress from './components/SideProgress';
@@ -26,15 +28,17 @@ function App() {
         <HeroBanner />
         
         <main className="w-full max-w-[1240px] mx-auto min-h-screen relative pt-2 md:pt-6 px-0 md:px-4">
-
-          <BestSellers />
-          <TopProducts />
-          <CategoryShowcase />
+          <Suspense fallback={<div className="h-40 flex items-center justify-center text-[#1C2978]/50 font-medium">Carregando catálogo...</div>}>
+            <BestSellers />
+            <TopProducts />
+            <CategoryShowcase />
+          </Suspense>
         </main>
 
-        <AboutStore />
-        
-        <Footer />
+        <Suspense fallback={null}>
+          <AboutStore />
+          <Footer />
+        </Suspense>
         
         <div className="md:hidden">
           <BottomNavigation />
@@ -49,4 +53,5 @@ function App() {
 }
 
 export default App;
+
 

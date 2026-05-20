@@ -3,9 +3,9 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import ScrollReveal from './ScrollReveal';
 
 const bannerImages = [
-  "/images/banners/imagem 1.webp",
-  "/images/banners/imagem 2.webp",
-  "/images/banners/imagem 3.webp"
+  { desktop: "/images/banners/imagem 1.webp", mobile: "/images/banners/imagem 1-mobile.webp" },
+  { desktop: "/images/banners/imagem 2.webp", mobile: "/images/banners/imagem 2-mobile.webp" },
+  { desktop: "/images/banners/imagem 3.webp", mobile: "/images/banners/imagem 3-mobile.webp" }
 ];
 
 export default function HeroBanner() {
@@ -64,7 +64,7 @@ export default function HeroBanner() {
             <div className="absolute -inset-1 bg-gradient-to-r from-[#1C2978]/10 to-[#FFD200]/10 rounded-3xl blur-md"></div>
             
             <div className="relative w-full h-[220px] sm:h-[300px] md:h-[380px] lg:h-[420px]">
-              {bannerImages.map((src, index) => {
+              {bannerImages.map((banner, index) => {
                 const diff = (index - selectedIndex + bannerImages.length) % bannerImages.length;
                 const zIndex = diff === 0 ? 30 : diff === 1 ? 20 : 10;
                 const cardClass = diff === 0 
@@ -85,7 +85,7 @@ export default function HeroBanner() {
 
                     {/* Efeito Acrílico/Blur no fundo apenas para mobile com auras conectivas */}
                     <div className="absolute inset-0 md:hidden z-0 overflow-hidden bg-[#070C25]">
-                      <img src={src} alt="" className="w-full h-full object-cover blur-[30px] scale-125 opacity-40" />
+                      <img src={banner.mobile} alt="" className="w-full h-full object-cover blur-[30px] scale-125 opacity-40" />
                       <div className="absolute inset-0 bg-[#070C25]/80 backdrop-blur-md"></div>
                       
                       {/* Auras luminosas para conexão de cores */}
@@ -94,11 +94,15 @@ export default function HeroBanner() {
                       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-36 rounded-full bg-[#1C2978]/70 blur-[55px] mix-blend-screen"></div>
                     </div>
 
-                    <img
-                      src={src}
-                      alt={`Banner promoção ${index + 1}`}
-                      className="w-full h-full object-contain md:object-cover relative z-10"
-                    />
+                    <picture className="w-full h-full relative z-10 block">
+                      <source media="(max-width: 767px)" srcSet={banner.mobile} />
+                      <source media="(min-width: 768px)" srcSet={banner.desktop} />
+                      <img
+                        src={banner.desktop}
+                        alt={`Banner promoção ${index + 1}`}
+                        className="w-full h-full object-contain md:object-cover"
+                      />
+                    </picture>
 
                     {/* Subtle flashlight effect on hover */}
                     <div 
