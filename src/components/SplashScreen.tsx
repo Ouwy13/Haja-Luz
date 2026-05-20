@@ -8,6 +8,7 @@ interface SplashScreenProps {
 export default function SplashScreen({ onFinish }: SplashScreenProps) {
   const preloaderRef = useRef<HTMLDivElement>(null);
   const logoRef = useRef<HTMLImageElement>(null);
+  const textRef = useRef<HTMLDivElement>(null);
   const progressBarRef = useRef<HTMLDivElement>(null);
   const bgRef = useRef<HTMLDivElement>(null);
 
@@ -16,8 +17,8 @@ export default function SplashScreen({ onFinish }: SplashScreenProps) {
     document.body.classList.add("loading");
 
     // Iniciar posições escondidas
-    gsap.set(logoRef.current, { opacity: 0, y: 30 });
-    gsap.set(progressBarRef.current, { scaleX: 0 });
+    gsap.set([logoRef.current, textRef.current], { opacity: 0, y: 30 });
+    gsap.set(progressBarRef.current, { scaleX: 0.9 });
 
     // Timeline de entrada suave
     const tl = gsap.timeline({
@@ -32,10 +33,16 @@ export default function SplashScreen({ onFinish }: SplashScreenProps) {
       duration: 0.8,
       ease: "back.out(1.7)",
       delay: 0.2
-    });
+    })
+    .to(textRef.current, {
+      opacity: 1,
+      y: 0,
+      duration: 0.5,
+      ease: "power2.out"
+    }, "-=0.4");
 
     const startLoadingProcess = () => {
-      const progress = { value: 0 };
+      const progress = { value: 0.9 };
       
       gsap.to(progress, {
         value: 1,
@@ -64,7 +71,7 @@ export default function SplashScreen({ onFinish }: SplashScreenProps) {
         }
       });
 
-      exitTl.to([logoRef.current, progressBarRef.current], {
+      exitTl.to([logoRef.current, textRef.current, progressBarRef.current], {
         opacity: 0,
         y: -30,
         duration: 0.5,
@@ -108,8 +115,15 @@ export default function SplashScreen({ onFinish }: SplashScreenProps) {
             ref={logoRef}
             src="/images/logos/logo-carregamento.webp"
             alt="Logo Haja Luz"
-            className="w-64 md:w-80 h-auto max-w-[80vw] object-contain drop-shadow-[0_0_20px_rgba(28,41,120,0.6)] relative z-10"
+            className="w-52 sm:w-64 md:w-80 h-auto object-contain drop-shadow-[0_0_25px_rgba(28,41,120,0.5)] relative z-10"
           />
+        </div>
+
+        {/* Textos da Marca */}
+        <div ref={textRef} className="text-center mb-8">
+          <h2 className="text-[#FFD200] font-sans font-bold text-xs md:text-sm tracking-[0.4em] uppercase leading-none">
+            ENERGIA NOVA
+          </h2>
         </div>
 
         {/* Barra de Progresso */}
