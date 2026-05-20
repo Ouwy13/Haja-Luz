@@ -27,16 +27,12 @@ export default function SplashScreen({ onFinish }: SplashScreenProps) {
       }
     });
 
-    tl.to(bgRef.current, {
-      opacity: 1,
-      duration: 0.5,
-      ease: "power2.inOut"
-    })
-    .to(logoRef.current, {
+    tl.to(logoRef.current, {
       opacity: 1,
       y: 0,
       duration: 0.8,
-      ease: "back.out(1.7)"
+      ease: "back.out(1.7)",
+      delay: 0.2
     })
     .to(textRef.current, {
       opacity: 1,
@@ -102,7 +98,7 @@ export default function SplashScreen({ onFinish }: SplashScreenProps) {
       {/* Painel de Fundo */}
       <div 
         ref={bgRef}
-        className="absolute inset-0 bg-[#0C1236] opacity-0"
+        className="absolute inset-0 bg-[#0C1236]"
       >
         {/* Faixa Decorativa Gradiente no Topo (Cores Haja Luz) */}
         <div className="absolute top-0 left-0 w-full h-[5px] bg-gradient-to-r from-[#1C2978] via-[#FFD200] to-[#1C2978]"></div>
