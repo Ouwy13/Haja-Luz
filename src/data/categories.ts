@@ -106,6 +106,7 @@ export const CATEGORIES: Category[] = [
       { name: 'Conectores e Acessórios de Rede', slug: 'conectores-rede' },
       { name: 'Torneiras e Acessórios Plásticos', slug: 'torneiras-plasticas' },
       { name: 'Pulverizadores e Acessórios', slug: 'pulverizadores' },
+      { name: 'Aterramento e Hastes', slug: 'aterramento-hastes' },
     ]
   },
   {

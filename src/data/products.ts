@@ -234,7 +234,7 @@ const RAW_PRODUCTS: Product[] = [
   { id: '208', name: 'Fita isolante 10 m x 19 mm verde', category: 'ferramentas', subcategory: 'fitas-isolantes', image: '/images/products/26.webp' },
   { id: '209', name: 'Fita isolante 10 m x 19 mm vermelha', category: 'ferramentas', subcategory: 'fitas-isolantes', image: '/images/products/26.webp' },
   { id: '210', name: 'Eletroduto Plast Sold 32 mm x 3 m', category: 'ferramentas', subcategory: 'eletrodutos-acessorios', image: '/images/products/26.webp' },
-  { id: '211', name: 'Eletroduto E6013 2,50 mm azul', category: 'ferramentas', subcategory: 'eletrodutos-acessorios', image: '/images/products/26.webp' },
+  { id: '211', name: 'Eletrodo E6013 2,50 mm azul', category: 'ferramentas', subcategory: 'eletrodutos-acessorios', image: '/images/products/26.webp' },
   { id: '212', name: 'Eletroduto Plast Sold 25 mm x 3 m', category: 'ferramentas', subcategory: 'eletrodutos-acessorios', image: '/images/products/26.webp' },
   { id: '213', name: 'Abraçadeira nylon 7,6 mm x 400 mm branca', category: 'ferramentas', subcategory: 'abracadeiras', image: '/images/products/26.webp' },
   { id: '214', name: 'Abraçadeira nylon 7,6 mm x 500 mm branca', category: 'ferramentas', subcategory: 'abracadeiras', image: '/images/products/26.webp' },
@@ -244,7 +244,7 @@ const RAW_PRODUCTS: Product[] = [
   { id: '218', name: 'Pulverizador manual 370 ml', category: 'ferramentas', subcategory: 'pulverizadores', image: '/images/products/26.webp' },
   { id: '219', name: 'Torneira jardim 1/2 polegada 10 cm plástica preta', category: 'ferramentas', subcategory: 'torneiras-plasticas', image: '/images/products/26.webp' },
   { id: '220', name: 'Isolador olhal 48 x 66 x 56', category: 'ferramentas', subcategory: 'isoladores-eletricos', image: '/images/products/26.webp' },
-  { id: '221', name: 'Padê bico N3 CCB Y', category: 'ferramentas', subcategory: 'isoladores-eletricos', image: '/images/products/26.webp' },
+  { id: '221', name: 'Pá de bico N3 com cabo Y', category: 'ferramentas', subcategory: 'ferramentas-pedreiro', image: '/images/products/26.webp' },
   { id: '222', name: 'Fita adesiva dupla face 2 m x 19 mm FIXAPRO', category: 'ferramentas', subcategory: 'fitas-acessorios', image: '/images/products/26.webp' },
   { id: '223', name: 'Fita adesiva crepe auto 40 mm x 18 m amarela', category: 'ferramentas', subcategory: 'fitas-acessorios', image: '/images/products/26.webp' },
   { id: '224', name: 'Fita adesiva dupla face 1,5 m x 19 mm', category: 'ferramentas', subcategory: 'fitas-acessorios', image: '/images/products/26.webp' },
@@ -267,6 +267,21 @@ const RAW_PRODUCTS: Product[] = [
   { id: '45', name: 'Ventilador de Mesa 40cm 127V', category: 'ventiladores', subcategory: 'ventiladores-mesa', image: '/images/products/26.webp', price: 129.90, oldPrice: 169.00, salesCount: 420 },
   { id: '46', name: 'Exaustor de Parede 25cm', category: 'ventiladores', subcategory: 'exaustores', image: '/images/products/26.webp', price: 89.90, oldPrice: 120.00, salesCount: 95 },
   { id: '47', name: 'Circulador de Ar 50cm Industrial', category: 'ventiladores', subcategory: 'circuladores', image: '/images/products/26.webp', price: 210.00, oldPrice: 280.00, salesCount: 65 },
+
+  // Novos Itens (Imagens do Cliente)
+  { id: '244', name: 'Fita adesiva dupla face 2 m x 12 mm FIXAPRO', category: 'ferramentas', subcategory: 'fitas-acessorios', image: '/images/products/26.webp' },
+  { id: '245', name: 'Disjuntor 63A 3P 4.5kA DIN TAF', category: 'disjuntores', subcategory: 'disjuntor-tripolar', image: '/images/products/26.webp' },
+  { id: '246', name: 'Disjuntor 70A 3P 4.5kA DIN TAF', category: 'disjuntores', subcategory: 'disjuntor-tripolar', image: '/images/products/26.webp' },
+  { id: '247', name: 'Disjuntor 80A 3P 4.5kA DIN TAF', category: 'disjuntores', subcategory: 'disjuntor-tripolar', image: '/images/products/26.webp' },
+  { id: '248', name: 'Barra de aterramento laminada 1.2 9.52 mm x 1000 mm', category: 'instalacao-acessorios', subcategory: 'aterramento-hastes', image: '/images/products/26.webp' },
+  { id: '249', name: 'Barra de aterramento laminada 1.2 9.52 mm x 1200 mm', category: 'instalacao-acessorios', subcategory: 'aterramento-hastes', image: '/images/products/26.webp' },
+  { id: '250', name: 'Barra de aterramento laminada 1.2 9.52 mm x 1500 mm', category: 'instalacao-acessorios', subcategory: 'aterramento-hastes', image: '/images/products/26.webp' },
+  { id: '251', name: 'Barra de aterramento laminada 1.2 9.52 mm x 2000 mm', category: 'instalacao-acessorios', subcategory: 'aterramento-hastes', image: '/images/products/26.webp' },
+  { id: '252', name: 'Barra de aterramento laminada 1.2 9.52 mm x 2400 mm', category: 'instalacao-acessorios', subcategory: 'aterramento-hastes', image: '/images/products/26.webp' },
+  { id: '253', name: 'Quadro de distribuição 4 disjuntores de embutir branco', category: 'disjuntores', subcategory: 'quadros-distribuicao', image: '/images/products/26.webp' },
+  { id: '254', name: 'Quadro de distribuição 8 disjuntores de embutir branco', category: 'disjuntores', subcategory: 'quadros-distribuicao', image: '/images/products/26.webp' },
+  { id: '255', name: 'Quadro de distribuição 16 disjuntores de embutir branco', category: 'disjuntores', subcategory: 'quadros-distribuicao', image: '/images/products/26.webp' },
+  { id: '256', name: 'Caixa de medição monofásica CM1 M1 cinza com visor de vidro padrão Equatorial', category: 'instalacao-acessorios', subcategory: 'grampos-curvas-caixas', image: '/images/products/26.webp' },
 ];
 
 const SUBCATEGORY_TO_CATEGORY: Record<string, string> = {
@@ -328,6 +343,7 @@ const SUBCATEGORY_TO_CATEGORY: Record<string, string> = {
   'conectores-rede': 'instalacao-acessorios',
   'torneiras-plasticas': 'instalacao-acessorios',
   'pulverizadores': 'instalacao-acessorios',
+  'aterramento-hastes': 'instalacao-acessorios',
   
   // Ventiladores e Exaustores
   'ventiladores-teto': 'ventiladores',
