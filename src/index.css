@@ -19,7 +19,11 @@
   body {
     @apply bg-slate-50 text-slate-900 overflow-x-hidden;
     font-family: var(--font-sans);
-    zoom: 0.85;
+  }
+  @media (min-width: 1024px) {
+    body {
+      zoom: 0.9;
+    }
   }
   body.loading {
     overflow: hidden !important;
