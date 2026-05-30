@@ -12,24 +12,24 @@ export interface Product {
 
 const RAW_PRODUCTS: Product[] = [
   // === ILUMINAÇÃO ===
-  { id: '1', name: 'Lâmpada LED Bulbo 9W Branca Fria', category: 'iluminacao', subcategory: 'lampadas-led', image: '/images/products/26.webp', isBestSeller: true, price: 5.99, oldPrice: 8.90, salesCount: 450 },
-  { id: '2', name: 'Lâmpada LED Bulbo 12W Branca Fria', category: 'iluminacao', subcategory: 'lampadas-led', image: '/images/products/26.webp', isBestSeller: true, price: 7.49, oldPrice: 11.50, salesCount: 320 },
-  { id: '3', name: 'Lâmpada LED Bulbo 15W Branca Quente', category: 'iluminacao', subcategory: 'lampadas-led', image: '/images/products/26.webp', price: 9.90, oldPrice: 14.90, salesCount: 150 },
-  { id: '4', name: 'Lâmpada LED Tubular T8 18W', category: 'iluminacao', subcategory: 'lampadas-led', image: '/images/products/26.webp', price: 18.50, oldPrice: 25.00, salesCount: 85 },
+  { id: '1', name: 'Lâmpada LED Bulbo 9W Branca Fria', category: 'iluminacao', subcategory: 'lampadas-led', image: '/images/products/lampada_led_bulbo.png', isBestSeller: true, price: 5.99, oldPrice: 8.90, salesCount: 450 },
+  { id: '2', name: 'Lâmpada LED Bulbo 12W Branca Fria', category: 'iluminacao', subcategory: 'lampadas-led', image: '/images/products/lampada_led_bulbo.png', isBestSeller: true, price: 7.49, oldPrice: 11.50, salesCount: 320 },
+  { id: '3', name: 'Lâmpada LED Bulbo 15W Branca Quente', category: 'iluminacao', subcategory: 'lampadas-led', image: '/images/products/lampada_led_bulbo.png', price: 9.90, oldPrice: 14.90, salesCount: 150 },
+  { id: '4', name: 'Lâmpada LED Tubular T8 18W', category: 'iluminacao', subcategory: 'lampadas-led', image: '/images/products/lampada_tubular_t8.png', price: 18.50, oldPrice: 25.00, salesCount: 85 },
   // Plafons e Painéis
-  { id: '5', name: 'Plafon LED de Embutir Quadrado 18W', category: 'iluminacao', subcategory: 'plafons-paineis', image: '/images/products/26.webp', isBestSeller: true, price: 24.90, oldPrice: 35.00, salesCount: 540 },
-  { id: '6', name: 'Plafon LED de Sobrepor Redondo 24W', category: 'iluminacao', subcategory: 'plafons-paineis', image: '/images/products/26.webp', price: 34.90, oldPrice: 48.00, salesCount: 120 },
-  { id: '7', name: 'Painel LED Slim 60x60 45W', category: 'iluminacao', subcategory: 'plafons-paineis', image: '/images/products/26.webp', price: 89.90, oldPrice: 120.00, salesCount: 65 },
+  { id: '5', name: 'Plafon LED de Embutir Quadrado 18W', category: 'iluminacao', subcategory: 'plafons-paineis', image: '/images/products/plafon_embutir_quadrado.png', isBestSeller: true, price: 24.90, oldPrice: 35.00, salesCount: 540 },
+  { id: '6', name: 'Plafon LED de Sobrepor Redondo 24W', category: 'iluminacao', subcategory: 'plafons-paineis', image: '/images/products/plafon_sobrepor_redondo.png', price: 34.90, oldPrice: 48.00, salesCount: 120 },
+  { id: '7', name: 'Painel LED Slim 60x60 45W', category: 'iluminacao', subcategory: 'plafons-paineis', image: '/images/products/painel_slim_60x60.png', price: 89.90, oldPrice: 120.00, salesCount: 65 },
   // Refletores
-  { id: '8', name: 'Refletor LED 50W IP66 Branco Frio', category: 'iluminacao', subcategory: 'refletores', image: '/images/products/26.webp', isBestSeller: true, price: 45.00, oldPrice: 65.00, salesCount: 210 },
-  { id: '9', name: 'Refletor LED 100W IP66 Branco Frio', category: 'iluminacao', subcategory: 'refletores', image: '/images/products/26.webp', price: 79.90, oldPrice: 110.00, salesCount: 90 },
-  { id: '10', name: 'Refletor LED 200W IP66 c/ Sensor', category: 'iluminacao', subcategory: 'refletores', image: '/images/products/26.webp', price: 149.90, oldPrice: 199.00, salesCount: 45 },
+  { id: '8', name: 'Refletor LED 50W IP66 Branco Frio', category: 'iluminacao', subcategory: 'refletores', image: '/images/products/refletor_led.png', isBestSeller: true, price: 45.00, oldPrice: 65.00, salesCount: 210 },
+  { id: '9', name: 'Refletor LED 100W IP66 Branco Frio', category: 'iluminacao', subcategory: 'refletores', image: '/images/products/refletor_led.png', price: 79.90, oldPrice: 110.00, salesCount: 90 },
+  { id: '10', name: 'Refletor LED 200W IP66 c/ Sensor', category: 'iluminacao', subcategory: 'refletores', image: '/images/products/refletor_led_sensor.png', price: 149.90, oldPrice: 199.00, salesCount: 45 },
   // Luminárias
-  { id: '11', name: 'Luminária de Emergência 30 LEDs', category: 'iluminacao', subcategory: 'luminarias', image: '/images/products/26.webp', isBestSeller: true, price: 19.90, oldPrice: 29.90, salesCount: 670 },
-  { id: '12', name: 'Luminária Pendente Industrial E27', category: 'iluminacao', subcategory: 'luminarias', image: '/images/products/26.webp', price: 54.90, oldPrice: 85.00, salesCount: 110 },
+  { id: '11', name: 'Luminária de Emergência 30 LEDs', category: 'iluminacao', subcategory: 'luminarias', image: '/images/products/luminaria_emergencia.png', isBestSeller: true, price: 19.90, oldPrice: 29.90, salesCount: 670 },
+  { id: '12', name: 'Luminária Pendente Industrial E27', category: 'iluminacao', subcategory: 'luminarias', image: '/images/products/luminaria_pendente_industrial.png', price: 54.90, oldPrice: 85.00, salesCount: 110 },
   // Fitas LED
-  { id: '13', name: 'Fita LED 5050 RGB 5 metros', category: 'iluminacao', subcategory: 'fitas-led', image: '/images/products/26.webp', price: 39.90, oldPrice: 55.00, salesCount: 230 },
-  { id: '14', name: 'Fita LED Branca Fria 5m 12V', category: 'iluminacao', subcategory: 'fitas-led', image: '/images/products/26.webp', price: 29.90, oldPrice: 45.00, salesCount: 145 },
+  { id: '13', name: 'Fita LED 5050 RGB 5 metros', category: 'iluminacao', subcategory: 'fitas-led', image: '/images/products/fita_led_rgb.png', price: 39.90, oldPrice: 55.00, salesCount: 230 },
+  { id: '14', name: 'Fita LED Branca Fria 5m 12V', category: 'iluminacao', subcategory: 'fitas-led', image: '/images/products/fita_led_branca.png', price: 29.90, oldPrice: 45.00, salesCount: 145 },
 
   // === FIOS E CABOS ===
   { id: '15', name: 'Cabo Flexível 2,5mm² 100m Azul', category: 'fios-cabos', subcategory: 'cabo-flexivel', image: '/images/products/26.webp', isBestSeller: true, price: 149.90, oldPrice: 189.00, salesCount: 890 },
@@ -298,12 +298,12 @@ const RAW_PRODUCTS: Product[] = [
   { id: '268', name: 'Corrugado Leve DN 20 (1/2\") 50 metros', category: 'instalacao-acessorios', subcategory: 'eletrodutos-acessorios', image: '/images/products/26.webp' },
 
   // Linha Lumanti
-  { id: '269', name: 'Refletor Start LED 50W 5500K Autovolt Lumanti', category: 'iluminacao', subcategory: 'refletores', image: '/images/products/26.webp' },
-  { id: '270', name: 'Refletor Start LED 100W 5500K Autovolt Lumanti', category: 'iluminacao', subcategory: 'refletores', image: '/images/products/26.webp' },
-  { id: '271', name: 'Refletor Start LED 150W 5500K Autovolt Lumanti', category: 'iluminacao', subcategory: 'refletores', image: '/images/products/26.webp' },
-  { id: '272', name: 'Refletor Start LED 200W 5500K Autovolt Lumanti', category: 'iluminacao', subcategory: 'refletores', image: '/images/products/26.webp' },
-  { id: '273', name: 'Refletor Start LED 300W 5500K Autovolt Lumanti', category: 'iluminacao', subcategory: 'refletores', image: '/images/products/26.webp' },
-  { id: '274', name: 'Fita LED Direct IP65 10mm 220V 3000K 120 LEDs/m Lumanti', category: 'iluminacao', subcategory: 'fitas-led', image: '/images/products/26.webp' },
+  { id: '269', name: 'Refletor Start LED 50W 5500K Autovolt Lumanti', category: 'iluminacao', subcategory: 'refletores', image: '/images/products/refletor_lumanti.png' },
+  { id: '270', name: 'Refletor Start LED 100W 5500K Autovolt Lumanti', category: 'iluminacao', subcategory: 'refletores', image: '/images/products/refletor_lumanti.png' },
+  { id: '271', name: 'Refletor Start LED 150W 5500K Autovolt Lumanti', category: 'iluminacao', subcategory: 'refletores', image: '/images/products/refletor_lumanti.png' },
+  { id: '272', name: 'Refletor Start LED 200W 5500K Autovolt Lumanti', category: 'iluminacao', subcategory: 'refletores', image: '/images/products/refletor_lumanti.png' },
+  { id: '273', name: 'Refletor Start LED 300W 5500K Autovolt Lumanti', category: 'iluminacao', subcategory: 'refletores', image: '/images/products/refletor_lumanti.png' },
+  { id: '274', name: 'Fita LED Direct IP65 10mm 220V 3000K 120 LEDs/m Lumanti', category: 'iluminacao', subcategory: 'fitas-led', image: '/images/products/fita_led_branca.png' },
 
   // Linha TAF / Outros (Disjuntores e Acessórios)
   { id: '275', name: 'Disjuntor 10A 1P 4.5kA DIN TAF', category: 'disjuntores', subcategory: 'disjuntor-monopolar', image: '/images/products/26.webp' },
